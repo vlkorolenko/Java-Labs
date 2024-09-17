@@ -120,4 +120,39 @@ public class Main {
 //                .filter(n -> n % 2 != 0)            // Фільтруємо тільки непарні числа
 //                .reduce((a, b) -> a * b);           // Обчислюємо добуток
 //    }
+
+    //task 6
+
+    public static void main(String[] args) {
+        // Створюємо об'єкти Person
+        Person john = new Person("John");
+        Person anna = new Person("Anna");
+        Person max = new Person("Max");
+        Person sophia = new Person("Sophia");
+
+        // Додаємо друзів
+        john.addFriend(anna);
+        john.addFriend(max);
+        anna.addFriend(sophia);
+        max.addFriend(sophia);
+        max.addFriend(john);
+
+        // Створюємо список людей
+        List<Person> people = Arrays.asList(john, anna, max);
+
+        // Отримуємо унікальні імена друзів у верхньому регістрі
+        List<String> uniqueFriendsNames = getUniqueFriendsNamesInUpperCase(people);
+
+        // Виводимо результат
+        System.out.println(uniqueFriendsNames);
+    }
+
+    // Метод для отримання унікальних імен друзів у верхньому регістрі
+    public static List<String> getUniqueFriendsNamesInUpperCase(List<Person> people) {
+        return people.stream()
+                .flatMap(person -> person.getFriends().stream()) // Отримуємо друзів кожної людини
+                .map(friend -> friend.getName().toUpperCase())   // Перетворюємо імена на верхній регістр
+                .distinct()                                     // Залишаємо тільки унікальні імена
+                .collect(Collectors.toList());                  // Збираємо результат у список
+    }
 }
