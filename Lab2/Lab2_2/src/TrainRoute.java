@@ -10,14 +10,12 @@ public class TrainRoute {
 
     public void addStop(String stop) {
         route.add(stop);
-        System.out.println("Зупинка " + stop + " додана до маршруту");
     }
 
     public void removeStop(String stop) {
         try {
             if (route.contains(stop)) {
                 route.remove(stop);
-                System.out.println("Зупинка " + stop + " видалена з маршруту");
             } else {
                 throw new NoSuchElementException("Зупинку " + stop + " не знайдено в маршруті");
             }
