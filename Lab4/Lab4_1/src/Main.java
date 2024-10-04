@@ -5,14 +5,14 @@ public class Main {
 
     // TASK 1
 
-//    public static void main(String[] args) {
-//        List<String> str = Arrays.asList("Xya", "Xyy", "Charlie", "David");
-//        Optional<String> filteredStrings = str.stream()
-//                .filter(s -> s.length() > 5 && s.startsWith("X"))
-//                .findFirst(); // Знаходимо перший рядок, що відповідає умовам
-//        String result = filteredStrings.orElse("Default");
-//        System.out.println("Default");
-//    }
+    public static void main(String[] args) {
+        List<String> str = Arrays.asList("Diiowj", "Xyfffy", "Charlie", "David");
+        Optional<String> filteredStrings = str.stream()
+                .filter(s -> s.length() > 5 && s.startsWith("X"))
+                .findFirst(); // Знаходимо перший рядок, що відповідає умовам
+        String result = filteredStrings.orElse("Default");
+        System.out.println("Default");
+    }
 
     // TASK 3
 

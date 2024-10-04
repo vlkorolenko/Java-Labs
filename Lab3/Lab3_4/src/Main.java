@@ -162,25 +162,25 @@ import java.util.ArrayList;
 
 // TASK 7
 
-//public class Main {
-//    public static void main(String[] args) {
-//        // Створюємо списки різних типів
-//        List<Integer> integerList = new ArrayList<>();
-//        List<Number> numberList = new ArrayList<>();
-//
-//        // Додаємо числа до списків
-//        addToList(integerList);
-//        addToList(numberList);
-//
-//        // Виводимо списки
-//        System.out.println("Список Integer: " + integerList);
-//        System.out.println("Список Number: " + numberList);
-//    }
-//
-//    // Метод для додавання цілих чисел від 1 до 10 до списку
-//    public static void addToList(List<? super Integer> list) {
-//        for (int i = 1; i <= 10; i++) {
-//            list.add(i); // Додаємо цілі числа від 1 до 10
-//        }
-//    }
-//}
+public class Main {
+    public static void main(String[] args) {
+        // Створюємо списки різних типів
+        List<Integer> integerList = new ArrayList<>();
+        List<Number> numberList = new ArrayList<>();
+
+        // Додаємо числа до списків
+        addToList(integerList);
+        addToList(numberList);
+
+        // Виводимо списки
+        System.out.println("Список Integer: " + integerList);
+        System.out.println("Список Number: " + numberList);
+    }
+
+    // Метод для додавання цілих чисел від 1 до 10 до списку
+    public static void addToList(List<? super Integer> list) {
+        for (int i = 1; i <= 10; i++) {
+            list.add(i); // Додаємо цілі числа від 1 до 10
+        }
+    }
+}
